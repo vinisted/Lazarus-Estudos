@@ -1,0 +1,270 @@
+object frmClientes: TfrmClientes
+  Left = 306
+  Height = 368
+  Top = 157
+  Width = 636
+  Caption = 'Cadastro de clientes'
+  ClientHeight = 368
+  ClientWidth = 636
+  LCLVersion = '2.2.6.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 368
+    Top = 0
+    Width = 636
+    ActivePage = TabSheet2
+    Align = alClient
+    TabIndex = 1
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Pesquisa'
+      ClientHeight = 340
+      ClientWidth = 628
+      object Panel1: TPanel
+        Left = 0
+        Height = 50
+        Top = 0
+        Width = 628
+        Align = alTop
+        ClientHeight = 50
+        ClientWidth = 628
+        TabOrder = 0
+        object edtPesquisa: TEdit
+          Left = 0
+          Height = 23
+          Top = 16
+          Width = 376
+          TabOrder = 0
+        end
+        object btnPesquisa: TButton
+          Left = 384
+          Height = 25
+          Top = 14
+          Width = 75
+          Caption = 'Pesquisa'
+          OnClick = btnPesquisaClick
+          TabOrder = 1
+        end
+        object rbNome: TRadioButton
+          Left = 480
+          Height = 19
+          Top = 16
+          Width = 53
+          Caption = 'Nome'
+          Checked = True
+          TabOrder = 3
+          TabStop = True
+        end
+        object rbCodigo: TRadioButton
+          Left = 544
+          Height = 19
+          Top = 16
+          Width = 59
+          Caption = 'Codigo'
+          TabOrder = 2
+        end
+      end
+      object DBGrid1: TDBGrid
+        Left = 0
+        Height = 290
+        Top = 50
+        Width = 628
+        Align = alClient
+        Color = clWindow
+        Columns = <>
+        DataSource = DCliente
+        TabOrder = 1
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Dados'
+      ClientHeight = 340
+      ClientWidth = 628
+      object Label1: TLabel
+        Left = 32
+        Height = 15
+        Top = 32
+        Width = 39
+        Alignment = taRightJustify
+        Caption = 'Código'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit
+        Left = 80
+        Height = 23
+        Top = 24
+        Width = 80
+        DataField = 'CODIGO'
+        DataSource = DCliente
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 0
+        OnChange = DBEdit1Change
+      end
+      object Label2: TLabel
+        Left = 38
+        Height = 15
+        Top = 60
+        Width = 33
+        Alignment = taRightJustify
+        Caption = 'Nome'
+        ParentColor = False
+      end
+      object DBEdit2: TDBEdit
+        Left = 80
+        Height = 23
+        Top = 52
+        Width = 368
+        DataField = 'NOME'
+        DataSource = DCliente
+        CharCase = ecUppercase
+        MaxLength = 50
+        TabOrder = 1
+      end
+      object Label3: TLabel
+        Left = 22
+        Height = 15
+        Top = 88
+        Width = 49
+        Alignment = taRightJustify
+        Caption = 'Endereço'
+        ParentColor = False
+      end
+      object DBEdit3: TDBEdit
+        Left = 80
+        Height = 23
+        Top = 80
+        Width = 368
+        DataField = 'ENDERECO'
+        DataSource = DCliente
+        CharCase = ecUppercase
+        MaxLength = 50
+        TabOrder = 2
+      end
+      object Label4: TLabel
+        Left = 40
+        Height = 15
+        Top = 116
+        Width = 31
+        Alignment = taRightJustify
+        Caption = 'Bairro'
+        ParentColor = False
+      end
+      object DBEdit4: TDBEdit
+        Left = 80
+        Height = 23
+        Top = 108
+        Width = 368
+        DataField = 'BAIRRO'
+        DataSource = DCliente
+        CharCase = ecUppercase
+        MaxLength = 30
+        TabOrder = 3
+      end
+      object Label5: TLabel
+        Left = 34
+        Height = 15
+        Top = 144
+        Width = 37
+        Alignment = taRightJustify
+        Caption = 'Cidade'
+        ParentColor = False
+      end
+      object DBEdit5: TDBEdit
+        Left = 80
+        Height = 23
+        Top = 136
+        Width = 368
+        DataField = 'CIDADE'
+        DataSource = DCliente
+        CharCase = ecUppercase
+        MaxLength = 50
+        TabOrder = 4
+      end
+      object Label6: TLabel
+        Left = 36
+        Height = 15
+        Top = 172
+        Width = 35
+        Alignment = taRightJustify
+        Caption = 'Estado'
+        ParentColor = False
+      end
+      object DBEdit6: TDBEdit
+        Left = 80
+        Height = 23
+        Top = 164
+        Width = 56
+        DataField = 'UF'
+        DataSource = DCliente
+        CharCase = ecUppercase
+        MaxLength = 2
+        TabOrder = 5
+      end
+      object Label7: TLabel
+        Left = 50
+        Height = 15
+        Top = 200
+        Width = 21
+        Alignment = taRightJustify
+        Caption = 'CEP'
+        ParentColor = False
+      end
+      object DBEdit7: TDBEdit
+        Left = 80
+        Height = 23
+        Top = 192
+        Width = 176
+        DataField = 'CEP'
+        DataSource = DCliente
+        CharCase = ecUppercase
+        MaxLength = 10
+        TabOrder = 6
+      end
+      object Label8: TLabel
+        Left = 27
+        Height = 15
+        Top = 228
+        Width = 44
+        Alignment = taRightJustify
+        Caption = 'Telefone'
+        ParentColor = False
+      end
+      object DBEdit8: TDBEdit
+        Left = 80
+        Height = 23
+        Top = 220
+        Width = 176
+        DataField = 'TELEFONE'
+        DataSource = DCliente
+        CharCase = ecUppercase
+        MaxLength = 15
+        TabOrder = 7
+      end
+      object DBNavigator1: TDBNavigator
+        Left = 0
+        Height = 41
+        Top = 299
+        Width = 628
+        Align = alBottom
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 41
+        ClientWidth = 628
+        DataSource = DCliente
+        Options = []
+        TabOrder = 8
+      end
+    end
+  end
+  object DCliente: TDataSource
+    DataSet = TabGlobal.TCliente
+    Left = 608
+    Top = 288
+  end
+end
